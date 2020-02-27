@@ -1,26 +1,44 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+const Header = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Frequently Asked Questions</h1>
     </div>
-  );
+  )
 }
 
+const Menu = () => {
+  return (
+    <div>
+      <p>What is Netflix?</p>
+      <p>How much does Netflix cost?</p>
+      <p>Where can I watch?</p>
+      <p>How do I cancel?</p>
+      <p>What can I watch on Netflix?</p>
+      <p>How does the free trial work?</p>
+    </div>
+  )
+}
+
+const Trial = () => {
+  return (
+    <div>
+      <button>TRY 30 DAYS FREE</button>
+    </div>
+  )
+}
+
+class App extends React.Component {
+  render () {
+    return (
+      <div>
+        <Header />
+        <Menu />
+        <Trial />
+      </div>
+    )
+  }
+}
 export default App;
